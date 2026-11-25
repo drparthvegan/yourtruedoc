@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Consultation — Your True Doc</title>
+<meta name="description" content="Book an online diet and lifestyle consultation with Dr. Sunaina, MBBS, natural hygiene practitioner.">
+<meta property="og:title" content="Book a Consultation — Your True Doc">
+<meta property="og:description" content="Book an online diet and lifestyle consultation with Dr. Sunaina, MBBS, natural hygiene practitioner.">
+<meta property="og:image" content="assets/sunaina.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+<header id="site-header"></header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Consult</span>
+    <h1>Book a consultation</h1>
+    <p>Personal diet and lifestyle guidance based on natural hygiene — online, from anywhere.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-grid">
+    <div>
+      <h2>Get in touch</h2>
+      <p style="margin:12px 0 30px">Share a little about your health and I'll get back to you to schedule your session.</p>
+      <div class="contact-item"><div class="icon card" style="padding:0;width:56px;height:56px;display:grid;place-items:center;font-size:1.6rem;background:var(--green-100)">💬</div><div><h3>WhatsApp</h3><a data-phone></a></div></div>
+      <div class="contact-item"><div class="icon card" style="padding:0;width:56px;height:56px;display:grid;place-items:center;font-size:1.6rem;background:var(--green-100)">✉️</div><div><h3>Email</h3><a data-email></a></div></div>
+      <div class="contact-item"><div class="icon card" style="padding:0;width:56px;height:56px;display:grid;place-items:center;font-size:1.6rem;background:var(--green-100)">🌍</div><div><h3>Location</h3><p>India · Online consultations worldwide</p></div></div>
+      <div class="tip">Please continue any prescribed medication until reviewed together. Changes are made gradually and safely.</div>
+    </div>
+    <form class="card" id="consult-form">
+      <div class="row-2">
+        <div class="field"><label for="name">Full name</label><input id="name" name="name" required></div>
+        <div class="field"><label for="age">Age</label><input id="age" name="age" type="number" min="1" max="120"></div>
+      </div>
+      <div class="row-2">
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email"></div>
+      </div>
+      <div class="field"><label for="type">Consultation type</label>
+        <select id="type" name="type">
+          <option>First consultation</option>
+          <option>Follow-up</option>
+          <option>Transition to raw vegan / fruit diet</option>
+          <option>Weight / digestion / skin concerns</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field"><label for="message">Your health concern</label><textarea id="message" name="message" rows="5" placeholder="Briefly describe your health concerns and goals…"></textarea></div>
+      <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Send via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
