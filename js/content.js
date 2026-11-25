@@ -5,11 +5,11 @@
    ========================================================= */
 
 const SITE = {
-  name: "Your True Doc",
+  name: "Eat Fruits & Heal",
   doctor: "Dr. Sunaina",
   degree: "MBBS",
   tagline: "Natural Hygiene · Raw Vegan · Fruit-Based Living",
-  email: "hello@yourtruedoc.com",          // TODO: replace with your email
+  email: "hello@eatfruitsandheal.com",          // TODO: replace with your email
   whatsapp: "919999999999",                 // TODO: country code + number, no "+"
   phoneDisplay: "+91 99999 99999",          // TODO
   location: "India · Online consultations worldwide",

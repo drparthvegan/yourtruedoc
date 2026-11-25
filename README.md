@@ -1,4 +1,4 @@
-# Your True Doc — Dr. Sunaina, MBBS
+# Eat Fruits & Heal — Dr. Sunaina, MBBS
 
 Static website: natural hygiene, raw vegan / fruit recipes, health topics, video lectures, consultations.
 

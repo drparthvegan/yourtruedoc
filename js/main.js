@@ -242,7 +242,7 @@
   document.querySelectorAll(".newsletter").forEach((f) => f.addEventListener("submit", (e) => {
     e.preventDefault();
     const email = f.querySelector("input").value;
-    location.href = `mailto:${SITE.email}?subject=${encodeURIComponent("Subscribe me to updates")}&body=${encodeURIComponent("Please add " + email + " to the Your True Doc updates list.")}`;
+    location.href = `mailto:${SITE.email}?subject=${encodeURIComponent("Subscribe me to updates")}&body=${encodeURIComponent("Please add " + email + " to the Eat Fruits & Heal updates list.")}`;
     toast("Thank you! 🌿");
   }));
 })();
