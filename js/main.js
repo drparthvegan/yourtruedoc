@@ -77,7 +77,7 @@
 
   /* ---------- Razorpay payment ---------- */
   const payBox = document.getElementById("pay-box");
-  if (payBox) {
+  if (payBox && !payBox.querySelector("form")) {
     if (SITE.razorpayButtonId) {
       const form = document.createElement("form");
       const sc = document.createElement("script");

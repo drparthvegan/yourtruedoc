@@ -291,3 +291,4 @@ form input:focus, form textarea:focus, form select:focus { outline: 2px solid va
 .policy li { margin-bottom: 8px; }
 .policy p { margin-bottom: 6px; }
 @media (max-width: 960px) { .book-grid { grid-template-columns: 1fr; } }
+.rzp-box form { display: flex; justify-content: center; }

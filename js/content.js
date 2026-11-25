@@ -22,7 +22,7 @@ const SITE = {
   consultFee: 500,                          // ₹ per consultation
   consultMinutes: 10,                       // minutes per consultation
   // Paste ONE of these from your Razorpay dashboard:
-  razorpayButtonId: "",                     // Payment Button ID, looks like "pl_XXXXXXXXXXXX"
+  razorpayButtonId: "pl_U4MvIoOenZeN4B",                   // Payment Button ID, looks like "pl_XXXXXXXXXXXX"
   razorpayLink: ""                          // OR a Payment Page / Payment Link URL, e.g. "https://rzp.io/rzp/xxxx"
 };
 
