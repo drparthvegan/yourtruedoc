@@ -15,7 +15,15 @@ const SITE = {
   location: "India · Online consultations worldwide",
   youtube: "https://youtube.com/",          // TODO: your channel link
   instagram: "https://instagram.com/",      // TODO
-  facebook: "https://facebook.com/"         // TODO
+  facebook: "https://facebook.com/",        // TODO
+  registrationNo: "",                       // TODO: medical council registration no. (shown on Book page & footer)
+
+  /* ---------- CONSULTATION & PAYMENT ---------- */
+  consultFee: 500,                          // ₹ per consultation
+  consultMinutes: 10,                       // minutes per consultation
+  // Paste ONE of these from your Razorpay dashboard:
+  razorpayButtonId: "",                     // Payment Button ID, looks like "pl_XXXXXXXXXXXX"
+  razorpayLink: ""                          // OR a Payment Page / Payment Link URL, e.g. "https://rzp.io/rzp/xxxx"
 };
 
 /* ---------- RECIPES ----------

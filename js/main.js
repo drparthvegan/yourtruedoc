@@ -7,7 +7,7 @@
     ["learn.html", "Learn", "learn"],
     ["recipes.html", "Recipes", "recipes"],
     ["videos.html", "Videos", "videos"],
-    ["contact.html", "Consult", "contact"]
+    ["book.html", "Book", "book"]
   ];
   const wa = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent("Hello Dr. Sunaina, I would like to book a consultation.")}`;
 
@@ -20,7 +20,7 @@
         <button class="nav-toggle" aria-label="Menu">☰</button>
         <ul class="nav-links">
           ${links.map(([h, t, k]) => `<li><a href="${h}" class="${k === page ? "active" : ""}">${t}</a></li>`).join("")}
-          <li><a href="${wa}" target="_blank" rel="noopener" class="btn btn-primary" style="color:#fff;padding:10px 20px">Book Now</a></li>
+          <li><a href="book.html" class="btn btn-primary" style="color:#fff;padding:10px 20px">Book ₹${SITE.consultFee}</a></li>
         </ul>
       </div>`;
     header.querySelector(".nav-toggle").addEventListener("click", () =>
@@ -53,11 +53,16 @@
             <a href="mailto:${SITE.email}">${SITE.email}</a>
             <a href="${wa}" target="_blank" rel="noopener">WhatsApp: ${SITE.phoneDisplay}</a>
             <p>${SITE.location}</p>
+            ${SITE.registrationNo ? `<p>Reg. No: ${SITE.registrationNo}</p>` : ""}
           </div>
         </div>
         <div class="disclaimer">
           <strong>Disclaimer:</strong> Information on this website is for educational purposes only and is not a substitute for individual medical advice.
           Do not stop prescribed medicines or begin extended fasting without supervision of a qualified practitioner.
+          <br><a href="policies.html#terms" style="display:inline;margin:0">Terms</a> ·
+          <a href="policies.html#privacy" style="display:inline;margin:0">Privacy</a> ·
+          <a href="policies.html#refund" style="display:inline;margin:0">Refund & Cancellation</a> ·
+          <a href="policies.html#contact" style="display:inline;margin:0">Contact</a>
           <br>© ${new Date().getFullYear()} ${SITE.name}. All rights reserved.
         </div>
       </div>`;
@@ -66,6 +71,29 @@
   document.querySelectorAll("[data-wa]").forEach((a) => { a.href = wa; a.target = "_blank"; a.rel = "noopener"; });
   document.querySelectorAll("[data-email]").forEach((a) => { a.href = `mailto:${SITE.email}`; a.textContent = SITE.email; });
   document.querySelectorAll("[data-phone]").forEach((a) => { a.href = wa; a.textContent = SITE.phoneDisplay; });
+  document.querySelectorAll("[data-fee]").forEach((el) => { el.textContent = SITE.consultFee; });
+  document.querySelectorAll("[data-minutes]").forEach((el) => { el.textContent = SITE.consultMinutes; });
+  document.querySelectorAll("[data-regno]").forEach((el) => { el.textContent = SITE.registrationNo ? `Reg. No: ${SITE.registrationNo}` : ""; });
+
+  /* ---------- Razorpay payment ---------- */
+  const payBox = document.getElementById("pay-box");
+  if (payBox) {
+    if (SITE.razorpayButtonId) {
+      const form = document.createElement("form");
+      const sc = document.createElement("script");
+      sc.src = "https://checkout.razorpay.com/v1/payment-button.js";
+      sc.async = true;
+      sc.dataset.payment_button_id = SITE.razorpayButtonId;
+      form.appendChild(sc);
+      payBox.appendChild(form);
+    } else if (SITE.razorpayLink) {
+      payBox.innerHTML = `<a href="${SITE.razorpayLink}" target="_blank" rel="noopener" class="btn btn-mango" style="width:100%;justify-content:center">Pay ₹${SITE.consultFee} securely</a>`;
+    } else {
+      payBox.innerHTML = `<a href="${wa}" target="_blank" rel="noopener" class="btn btn-mango" style="width:100%;justify-content:center">Book on WhatsApp</a>
+        <p style="font-size:.85rem;margin-top:10px;text-align:center">Online payment coming soon.</p>`;
+    }
+  }
+
   document.querySelectorAll("[data-youtube]").forEach((a) => { a.href = SITE.youtube; });
 
   /* ---------- helpers ---------- */
@@ -207,7 +235,7 @@
     consultForm.addEventListener("submit", (e) => {
       e.preventDefault();
       const d = Object.fromEntries(new FormData(consultForm));
-      const msg = `Hello Dr. Sunaina,\n\nName: ${d.name}\nAge: ${d.age}\nPhone: ${d.phone}\nEmail: ${d.email}\nConsultation: ${d.type}\n\nHealth concern:\n${d.message}`;
+      const msg = `Hello Dr. Sunaina,\n\nName: ${d.name}\nAge: ${d.age}\nPhone: ${d.phone}\nEmail: ${d.email}\nConsultation: ${d.type}\nPayment ID: ${d.payment || "-"}\n\nHealth concern:\n${d.message}`;
       window.open(`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(msg)}`, "_blank");
     });
   }
