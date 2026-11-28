@@ -15,7 +15,7 @@ const SITE = {
   location: "India · Online consultations worldwide",
   youtube: "https://youtube.com/",          // TODO: your channel link
   instagram: "https://instagram.com/",      // TODO
-  facebook: "https://facebook.com/",        // TODO
+  facebook: "https://www.facebook.com/share/1KGcTkeBvv/",
   registrationNo: "",                       // TODO: medical council registration no. (shown on Book page & footer)
 
   /* ---------- CONSULTATION & PAYMENT ---------- */
