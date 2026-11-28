@@ -231,3 +231,12 @@ const VIDEOS = [
   { title: "The Power of Rest & Sleep", category: "Lifestyle", youtubeId: "", duration: "", description: "Why rest is the foundation of healing and how to sleep better." },
   { title: "Raw Vegan Kitchen Basics", category: "Recipes", youtubeId: "", duration: "", description: "Tools, shopping lists and quick recipes for a raw vegan kitchen." }
 ];
+
+/* ---------- CORE PRINCIPLES (image cards) ----------
+   Add a new one: put the picture in assets/ and copy an entry. */
+const PRINCIPLES = [
+  { image: "assets/principle-toxemia.jpg", title: "Remove the cause", text: "Toxemia is the root cause of diseases, hence removing the cause serves in best interest of the health of the patient." },
+  { image: "assets/principle-frugivores.jpg", title: "Our natural design", text: "Human beings are frugivores by their natural design. Deviation from this original nature is the primary cause of all sufferings." },
+  { image: "assets/principle-raw-whole-food.jpg", title: "Whole & raw", text: "Processing of any kind, from cooking to cutting, chopping, mixing, juicing, blending, destroys the vital nutrients which were present originally in the food. Consuming the food whole or in raw state preserves the nutrients and hence maintains the health of the body." },
+  { image: "assets/principle-lifestyle.jpg", title: "Beyond food", text: "Daily movement, sunlight, fresh air, clean water and emotional hygiene are supplementary to natural food to build and maintain health." }
+];

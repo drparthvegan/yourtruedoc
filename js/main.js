@@ -200,6 +200,33 @@
       `<tr><td><strong>${esc(a)}</strong></td><td class="good">${esc(b)}</td><td class="bad">${esc(c)}</td></tr>`).join("");
   }
 
+  /* ---------- Principles ---------- */
+  const pGrid = document.getElementById("principles-grid");
+  if (pGrid && typeof PRINCIPLES !== "undefined") {
+    pGrid.innerHTML = PRINCIPLES.map((p, i) => `
+      <figure class="card principle" data-i="${i}" tabindex="0">
+        <img src="${p.image}" alt="${esc(p.text)}" loading="lazy">
+        <figcaption><h3>${esc(p.title)}</h3><p>${esc(p.text)}</p></figcaption>
+      </figure>`).join("");
+    pGrid.querySelectorAll(".principle").forEach((el) => {
+      const open = () => {
+        const p = PRINCIPLES[+el.dataset.i];
+        let lb = document.getElementById("lightbox");
+        if (!lb) {
+          lb = document.createElement("div"); lb.id = "lightbox"; lb.className = "modal";
+          lb.innerHTML = `<div class="modal-box lightbox-box"><button class="modal-close" aria-label="Close">×</button><img alt=""></div>`;
+          document.body.appendChild(lb);
+          lb.addEventListener("click", (e) => { if (e.target === lb || e.target.classList.contains("modal-close")) lb.classList.remove("open"); });
+          document.addEventListener("keydown", (e) => { if (e.key === "Escape") lb.classList.remove("open"); });
+        }
+        const img = lb.querySelector("img"); img.src = p.image; img.alt = p.text;
+        lb.classList.add("open");
+      };
+      el.addEventListener("click", open);
+      el.addEventListener("keydown", (e) => { if (e.key === "Enter") open(); });
+    });
+  }
+
   /* ---------- Videos ---------- */
   const videoGrid = document.getElementById("video-grid");
   if (videoGrid) {
