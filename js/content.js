@@ -57,16 +57,16 @@ const RECIPES = [
     tip: "Eating mango whole, without cutting, keeps it fresh and juicy till the last bite."
   },
   {
-    title: "Chiku Mono Meal",
-    category: "Sweet",
-    emoji: "🟤",
-    color: "#f3e8dc",
-    time: "No prep",
+    title: "Strawberry Mono Meal",
+    category: "Sub-acid",
+    emoji: "🍓",
+    color: "#fde0e3",
+    time: "5 min",
     serves: "1",
-    summary: "Naturally sweet and creamy. A great winter mono meal.",
-    ingredients: ["8–12 ripe, soft chikus (sapota)"],
-    steps: ["Pick chikus that give slightly when pressed.", "Break open with your hands and eat the pulp, leaving the seeds.", "Eat until satisfied."],
-    tip: "Hard chikus are unripe and taste astringent. Keep them a day or two until soft."
+    summary: "A winter treat. Fresh, fragrant strawberries eaten whole.",
+    ingredients: ["400–600 g fresh, ripe strawberries"],
+    steps: ["Soak in water for 10 minutes, then rinse well under running water.", "Eat whole, holding the green top and biting around it.", "Eat until satisfied."],
+    tip: "Indian strawberries (Mahabaleshwar, Himachal) are in season from December to March."
   },
   {
     title: "Papaya Mono Meal",
