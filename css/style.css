@@ -300,3 +300,8 @@ form input:focus, form textarea:focus, form select:focus { outline: 2px solid va
 .principle figcaption p { font-size: 0.95rem; }
 .lightbox-box { max-width: 760px; background: #fff; }
 .lightbox-box img { width: 100%; height: auto; border-radius: 24px; }
+.principles-list { max-width: 720px; margin: 0 auto; display: grid; gap: 32px; }
+.principles-list .principle img { aspect-ratio: auto; height: auto; object-fit: initial; }
+.principles-list .principle figcaption { text-align: center; }
+.principles-list .principle figcaption p { display: none; }
+.principles-list .principle figcaption { padding: 16px 24px; }
