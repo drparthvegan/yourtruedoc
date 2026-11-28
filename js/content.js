@@ -10,8 +10,8 @@ const SITE = {
   degree: "MBBS",
   tagline: "Natural Hygiene · Raw Vegan · Fruit-Based Living",
   email: "hello@doctorbuddha.com",          // TODO: replace with your email
-  whatsapp: "919999999999",                 // TODO: country code + number, no "+"
-  phoneDisplay: "+91 99999 99999",          // TODO
+  whatsapp: "919039004806",
+  phoneDisplay: "+91 90390 04806",
   location: "India · Online consultations worldwide",
   youtube: "https://youtube.com/",          // TODO: your channel link
   instagram: "https://instagram.com/",      // TODO
