@@ -134,8 +134,8 @@
       <h2>${esc(r.title)}</h2>
       <p style="margin-top:8px">${esc(r.summary)}</p>
       <div class="recipe-meta"><span>⏱ ${esc(r.time)}</span><span>🍽 Serves ${esc(r.serves)}</span></div>
-      <h4>Ingredients</h4><ul>${r.ingredients.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
-      <h4>Method</h4><ol>${r.steps.map((x) => `<li>${esc(x)}</li>`).join("")}</ol>
+      <h4>What you need</h4><ul>${r.ingredients.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+      <h4>How to eat</h4><ol>${r.steps.map((x) => `<li>${esc(x)}</li>`).join("")}</ol>
       ${r.tip ? `<div class="tip">🌿 <strong>Dr. Sunaina's tip:</strong> ${esc(r.tip)}</div>` : ""}`;
     modal.classList.add("open");
   }
@@ -160,7 +160,7 @@
         .filter(({ r }) => cat === "All" || r.category === cat)
         .filter(({ r }) => !q || (r.title + r.summary + r.ingredients.join(" ")).toLowerCase().includes(q));
       if (limit) list = list.slice(0, limit);
-      recipeGrid.innerHTML = list.length ? list.map(({ r, i }) => recipeCard(r, i)).join("") : `<div class="empty">No recipes found.</div>`;
+      recipeGrid.innerHTML = list.length ? list.map(({ r, i }) => recipeCard(r, i)).join("") : `<div class="empty">No meals found.</div>`;
       bindRecipes(recipeGrid, RECIPES);
     };
     if (filtersEl) {

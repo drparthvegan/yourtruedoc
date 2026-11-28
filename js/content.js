@@ -26,82 +26,119 @@ const SITE = {
   razorpayLink: ""                          // OR a Payment Page / Payment Link URL, e.g. "https://rzp.io/rzp/xxxx"
 };
 
-/* ---------- RECIPES ----------
-   category: "Smoothies" | "Salads" | "Mono Meals" | "Desserts" | "Juices" | "Breakfast"
+/* ---------- MONO FRUIT MEALS (Recipes page) ----------
+   One kind of fruit per meal, eaten whole and raw.
+   category: "Sweet" | "Sub-acid" | "Acid" | "Melons"
    color: background colour of the card picture
 */
 const RECIPES = [
   {
-    title: "Mango Banana Morning Smoothie",
-    category: "Smoothies",
+    title: "Banana Mono Meal",
+    category: "Sweet",
+    emoji: "🍌",
+    color: "#fff4cc",
+    time: "No prep",
+    serves: "1",
+    summary: "The easiest, most filling mono meal. Ripe bananas, eaten whole until satisfied.",
+    ingredients: ["6–10 fully ripe bananas (yellow with brown spots)"],
+    steps: ["Choose bananas with brown spots; they are fully ripe and easy to digest.", "Peel and eat whole, slowly, one at a time.", "Stop when you feel comfortably satisfied."],
+    tip: "Green-tipped bananas are not ripe yet. Let them ripen at room temperature for a few days."
+  },
+  {
+    title: "Mango Mono Meal",
+    category: "Sweet",
     emoji: "🥭",
     color: "#fdf0dc",
+    time: "No prep",
+    serves: "1",
+    summary: "Summer's king of fruits. Soft, fragrant mangoes eaten on their own.",
+    ingredients: ["3–5 ripe mangoes (Alphonso, Kesar, Langra or Dasheri)"],
+    steps: ["Soak mangoes in water for 30 minutes before eating.", "Gently squeeze each mango until soft, then suck the pulp directly from the fruit.", "Eat until satisfied."],
+    tip: "Eating mango whole, without cutting, keeps it fresh and juicy till the last bite."
+  },
+  {
+    title: "Chiku Mono Meal",
+    category: "Sweet",
+    emoji: "🟤",
+    color: "#f3e8dc",
+    time: "No prep",
+    serves: "1",
+    summary: "Naturally sweet and creamy. A great winter mono meal.",
+    ingredients: ["8–12 ripe, soft chikus (sapota)"],
+    steps: ["Pick chikus that give slightly when pressed.", "Break open with your hands and eat the pulp, leaving the seeds.", "Eat until satisfied."],
+    tip: "Hard chikus are unripe and taste astringent. Keep them a day or two until soft."
+  },
+  {
+    title: "Papaya Mono Meal",
+    category: "Sweet",
+    emoji: "🧡",
+    color: "#ffe1cf",
+    time: "2 min",
+    serves: "1",
+    summary: "Gentle on the stomach and available all year. Ideal for beginners.",
+    ingredients: ["1 medium ripe papaya (about 1 kg)"],
+    steps: ["Choose a papaya that is mostly yellow-orange and slightly soft.", "Halve it, scoop out the seeds, and eat the flesh with a spoon.", "Eat until satisfied."],
+    tip: "Papaya is the one fruit here you need to open, but eat it as soon as it is cut."
+  },
+  {
+    title: "Grapes Mono Meal",
+    category: "Sub-acid",
+    emoji: "🍇",
+    color: "#ece3f5",
+    time: "2 min",
+    serves: "1",
+    summary: "Juicy, hydrating and light. Wash well and eat by the bunch.",
+    ingredients: ["500 g – 1 kg grapes (black or green, seeded if available)"],
+    steps: ["Soak grapes in water with a little salt or vinegar for 15 minutes, then rinse well.", "Eat straight from the bunch, chewing well.", "Eat until satisfied."],
+    tip: "Seeded grapes are closer to nature. Chew the seeds or spit them out, as you like."
+  },
+  {
+    title: "Apple Mono Meal",
+    category: "Sub-acid",
+    emoji: "🍎",
+    color: "#fde4e7",
+    time: "No prep",
+    serves: "1",
+    summary: "Crunchy, satisfying and easy to carry anywhere.",
+    ingredients: ["3–5 crisp, ripe apples"],
+    steps: ["Wash apples well under running water.", "Eat whole with the skin, biting and chewing slowly.", "Eat until satisfied."],
+    tip: "Choose local, in-season apples (Himachal, Kashmir) for the best taste."
+  },
+  {
+    title: "Orange Mono Meal",
+    category: "Acid",
+    emoji: "🍊",
+    color: "#ffe8cc",
+    time: "No prep",
+    serves: "1",
+    summary: "Winter's juicy refresher. Peel and eat whole segments, never juiced.",
+    ingredients: ["5–8 sweet oranges, kinnow or mosambi"],
+    steps: ["Peel with your hands.", "Eat segment by segment, including the white pith and fibre.", "Eat until satisfied."],
+    tip: "Eating the whole fruit instead of juice keeps all its fibre and nutrients."
+  },
+  {
+    title: "Pomegranate Mono Meal",
+    category: "Sub-acid",
+    emoji: "❤️",
+    color: "#fbdada",
     time: "5 min",
     serves: "1",
-    summary: "A creamy, naturally sweet start to the day — just two sweet fruits and water.",
-    ingredients: ["2 ripe mangoes, peeled", "2 ripe bananas", "1 cup water or coconut water"],
-    steps: ["Peel and chop the fruits.", "Blend with water until smooth.", "Drink slowly, preferably on an empty stomach."],
-    tip: "Sweet fruits combine well together. Avoid adding acid fruits like orange to this blend."
+    summary: "A slow, mindful meal. Break open and eat the jewel-like arils.",
+    ingredients: ["2–3 ripe pomegranates"],
+    steps: ["Score the skin lightly and break the fruit open with your hands.", "Eat the arils directly from the fruit.", "Eat until satisfied."],
+    tip: "The slow pace of eating pomegranate naturally prevents overeating."
   },
   {
     title: "Watermelon Mono Meal",
-    category: "Mono Meals",
+    category: "Melons",
     emoji: "🍉",
-    color: "#fde4e7",
+    color: "#e6f2e4",
     time: "2 min",
     serves: "1",
-    summary: "Melons digest fastest — eat them alone, and eat until satisfied.",
+    summary: "Melons digest fastest. Eat them alone, on an empty stomach.",
     ingredients: ["1/4 to 1/2 ripe watermelon"],
-    steps: ["Cut into slices or cubes.", "Eat on an empty stomach, alone.", "Wait at least 30–45 minutes before the next meal."],
+    steps: ["Cut into large slices just before eating.", "Eat the red flesh directly from the slice.", "Wait at least 30–45 minutes before your next meal."],
     tip: "'Eat melons alone or leave them alone' — a classic natural hygiene rule."
-  },
-  {
-    title: "Green Leafy Tomato Salad",
-    category: "Salads",
-    emoji: "🥗",
-    color: "#e6f2e4",
-    time: "10 min",
-    serves: "2",
-    summary: "Fresh, hydrating and full of minerals. Simple dressing, no oil needed.",
-    ingredients: ["2 cups lettuce or spinach", "2 tomatoes, diced", "1 cucumber, sliced", "Juice of 1/2 lemon", "Fresh coriander & mint"],
-    steps: ["Wash and chop the greens.", "Add tomato, cucumber and herbs.", "Squeeze lemon over and toss."],
-    tip: "Tomatoes and cucumbers pair well with leafy greens. Keep the salad simple for easy digestion."
-  },
-  {
-    title: "Date & Banana Raw Ice Cream",
-    category: "Desserts",
-    emoji: "🍨",
-    color: "#f3e8dc",
-    time: "10 min + freeze",
-    serves: "2",
-    summary: "A guilt-free dessert made from frozen ripe bananas — no sugar, no dairy.",
-    ingredients: ["4 ripe bananas, sliced and frozen", "4–5 soft dates, pitted", "Splash of water"],
-    steps: ["Freeze banana slices overnight.", "Blend frozen banana with dates and a splash of water.", "Serve immediately as soft-serve."],
-    tip: "Use well-spotted bananas for the best natural sweetness."
-  },
-  {
-    title: "Fresh Orange Juice",
-    category: "Juices",
-    emoji: "🍊",
-    color: "#ffe8cc",
-    time: "5 min",
-    serves: "1",
-    summary: "Seasonal, juicy and refreshing. Drink fresh — never stored.",
-    ingredients: ["4–5 sweet oranges or mosambi"],
-    steps: ["Cut and juice the oranges.", "Drink immediately on an empty stomach."],
-    tip: "Acid fruits combine well with other acid and sub-acid fruits, not with sweet dried fruits."
-  },
-  {
-    title: "Papaya & Pomegranate Bowl",
-    category: "Breakfast",
-    emoji: "🍈",
-    color: "#ffe1cf",
-    time: "5 min",
-    serves: "1",
-    summary: "A gentle, gut-friendly breakfast bowl full of colour.",
-    ingredients: ["2 cups ripe papaya, cubed", "1/2 cup pomegranate seeds", "Few mint leaves"],
-    steps: ["Cube the papaya.", "Top with pomegranate and mint.", "Eat fresh."],
-    tip: "Papaya is easy on digestion and great for beginners transitioning to fruits."
   }
 ];
 
@@ -189,7 +226,7 @@ const TOPICS = [
     summary: "Giving the digestive system rest allows the body to direct energy towards cleansing and repair.",
     points: [
       "Begin with longer gaps between meals",
-      "Try a light fruit or juice day",
+      "Try a mono fruit day",
       "Longer fasts only under qualified supervision",
       "Break fasts gently with juicy fruits"
     ]
